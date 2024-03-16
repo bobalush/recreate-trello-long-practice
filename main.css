@@ -1,5 +1,36 @@
 /* Your code here */
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Nueu', sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+.header-nav__container {
+  background-color: #026aa7;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 4px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.header-nav__group#header_icons {
+  justify-self: flex-end;
+}
+
+.header-nav__group #alerts {
+  background-color: #cf513d;
+}
+
+@media screen and (max-width: 730px) {
+  /* Hide the header search input field. */
+  /* Hide the "Boards" text, but leave the boards icon. */
+  .header-nav__button#search input[type="search"],
+  .header-nav__button#boards .boards-label {
+    display: none;
+  }
+}
 /* Supplied CSS follows. */
 .header-nav__group{
   display: flex;
