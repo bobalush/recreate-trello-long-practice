@@ -31,9 +31,222 @@ body {
     display: none;
   }
 }
+
+/*  PHASE 2 */
+
+.team__container {
+  background-color: #f4f5f7;
+  padding: 32px;
+}
+
+.team__info {
+  flex-direction: column;
+  margin: 0;
+  max-width: 650px;
+  text-align: center;
+}
+
+.team__info > h1 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.team__info  a {
+  color:#172b4d;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+/* PHASE 3 */
+
+.tabbed-nav__container {
+  background-color: #f4f5f7;
+}
+
+.tabbed-nav__group {
+  border-bottom: 1px solid #dfe1e6;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.tabbed-nav__link {
+  background-color: white;
+  border: 1px solid #dfe1e6;
+  border-bottom: 0;
+  border-radius: 2px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 10px;
+  margin: 0 5px;
+  color: #172b4d;
+  transition: background-color 0.3s ease   /* smooth transition for hover effect */
+}
+
+.tabbed-nav__link:hover {
+  background-color: #e9e9e9;
+}
+
+.tabbed-nav__link.active {
+  background-color: #ddd;
+  border-bottom-color: #fff; 
+}
+
+.tabbed-nav__group, .tabbed-nav__link {
+  display: block; /* Stacks the nav group and links vertically */
+}
+
+/* Media query for screens wider than 500 pixels */
+@media (min-width: 501px) {
+  .tabbed-nav__group {
+      display: flex; /* Uses Flexbox for the layout */
+      justify-content: center; /* Centers children horizontally */
+      align-items: center; /* Aligns children vertically */
+  }
+  /* Additional flexbox properties can be added to .tabbed-nav__link if needed */
+}
+
+/* PHASE 4 */
+.boards__container {
+  margin: 0;
+  padding: 32px;
+  max-width: 1400px;  
+  display: flex;
+  flex-direction: row;
+}
+.board-1 {
+  background-image: url('./board-backgrounds/board-1-background.jpg');
+}
+
+.board-2 {
+  background-image: url('./board-backgrounds/board-2-background.jpg');
+}
+
+.board-3 {
+  background-image: url('./board-backgrounds/board-3-background.jpg');
+}
+
+.board-4 {
+  background-image: url('./board-backgrounds/board-4-background.jpg');
+}
+
+.board-5 {
+  background-image: url('./board-backgrounds/board-5-background.jpg');
+}
+
+.board-6 {
+  background-image: url('./board-backgrounds/board-6-background.jpg');
+}
+
+.board-7 {
+  background-image: url('./board-backgrounds/board-7-background.jpg');
+}
+
+.board-8 {
+  background-image: url('./board-backgrounds/board-8-background.jpg');
+}
+
+.board-9 {
+  background-image: url('./board-backgrounds/board-9-background.jpg');
+}
+.board-10 {
+  background-image: url('./board-backgrounds/board-10-background.jpg');
+}
+
+
+
+.boards__sidebar {
+  background-color: #6c547b;
+  border-radius: 3px;
+  margin: 0 32px 32px 0;
+  padding: 0 20px 32px 20px;
+  max-height: 130px;
+  max-width: 180px;
+  width: 20%;
+}
+
+.boards__sidebar-content .title {
+  color: white;
+}
+
+.boards__sidebar-content a {
+  color: white;
+}
+
+.boards__sidebar-content .description {
+  color: lightblue;
+}
+
+.boards__group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.boards__board {
+  background-color: hotpink;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-weight: bold;
+  height: 100px;
+  margin: 0 8px 16px;
+  max-width: 250px;
+  padding: 4px 8px;
+  position: relative;
+  color: white;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+@media (max-width: 768px) {
+  .boards__board {
+      width: 100%; /* Each board takes the full container width */
+      max-width: none; /* Unsets any maximum width setting */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .boards__board {
+      width: 33.333%; /* Sets the width of each board to one-third */
+  }
+}
+
+@media (max-width: 768px) {
+  .boards__container {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+
+  .boards__sidebar, .boards__group {
+    width: 100%;
+  }
+
+  .boards__sidebar {
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .boards__sidebar {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+
+
 /* Supplied CSS follows. */
 .header-nav__group{
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .header-nav__button {
